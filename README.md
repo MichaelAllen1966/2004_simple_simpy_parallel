@@ -1,6 +1,6 @@
 # 2004_simple_simpy_parallel
 
-A simple SimPy hospital model running on parallel cpu cores.
+A simple SimPy hospital model running on parallel cpu cores. The intention is to show a framework for hospital modelling using SimPy with Model, Hospital, and Patient classes, and with scenarios and trials managed by a Replicator class; it is not intended to be a full hospital model itself.
 
 ## Running the simulation:
 
