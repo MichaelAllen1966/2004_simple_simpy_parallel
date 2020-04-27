@@ -1,0 +1,11 @@
+,,percent_5,percent_5,percent_5,median,median,median,percent_95,percent_95,percent_95
+,,min,median,max,min,median,max,min,median,max
+result_type,name,,,,,,,,,
+in_bed,default,161.65,192.45,200.0,191.0,200.0,200.0,199.25,200.0,200.0
+in_bed,low_demand,118.4,133.45,149.95,123.5,140.5,161.0,126.0,144.125,170.0
+waiting_p1,default,0.0,0.0,1.9500000000000002,0.0,0.0,3.0,0.0,0.0,4.0
+waiting_p1,low_demand,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+waiting_p2,default,0.0,0.0,3.0,0.0,0.0,7.0,0.0,1.0,9.25
+waiting_p2,low_demand,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+waiting_p3,default,0.0,0.0,11.7,0.0,9.5,36.0,1.25,39.0,60.25
+waiting_p3,low_demand,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
