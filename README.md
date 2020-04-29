@@ -46,4 +46,16 @@ This will fetch and install the libraries in a conda environment 'simple_sim'
 
 4. Install requirements with `pip install -r requirements.txt`
 
+### Learning objectives
 
+1. Learn how to set up a custom Python environment  (to ensure consistency of package versions) using Anaconda or Python/Pip environments
+
+2. Learn how to structure a simple SimPy simulation using Object Oriented Programming (OOP)
+
+3. Learn how to create a Jupyter Notebook user interface to a model, allowing the user to create multiple sceanrios
+
+4. Learn how to run parallel Python function calls across multiple CPU cores
+
+5. Learn how to run SimPy models with multiple scenarios and replicates (across CPU cores) with a Jupyter Notebook interface
+
+6. Learn how to make you model available  on the web using GitHub and mybinder.org
