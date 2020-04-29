@@ -21,7 +21,9 @@ To set up use of any Python code, using a Jupyter Notebook as the front end, on 
 
 ## Set up environment locally
 
-To get the correct libraries and versions it is recommended that the provided conda environment is used. To create and activate a bootcomp environment:
+To get the correct libraries and versions it is recommended that the provided conda environment is used. To create and activate the environment:
+
+### Using Anaconda
 
 1. Windows -> Open Anaconda prompt. Mac/linux -> Open a terminal
 
@@ -33,3 +35,15 @@ This will fetch and install the libraries in a conda environment 'simple_sim'
 
 4. To activate the enviroment run the following command:
     `conda activate screening_lab`
+    
+### Using Python environments
+
+1. Navigate to the main project folder (unless you prefer to build your Python environments elsewhere.
+
+2. Open a terminal/command line, and type `python3 -m venv venv`
+
+3. Activate your environment with `source .\venv\bin\activate`
+
+4. Install requirements with `pip install -r requirements.txt`
+
+
