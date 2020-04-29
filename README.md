@@ -34,7 +34,7 @@ To get the correct libraries and versions it is recommended that the provided co
 This will fetch and install the libraries in a conda environment 'simple_sim'
 
 4. To activate the enviroment run the following command:
-    `conda activate screening_lab`
+    `conda activate simple_sim`
     
 ### Using Python environments
 
