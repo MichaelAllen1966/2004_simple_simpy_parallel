@@ -80,13 +80,11 @@ class Hospital():
         # Wait patient length of stay using environment timeout
         yield self._env.timeout(patient.los) 
         
-        # Patient stay in hospital has ended. Remove from list, and record time
+        # Patient stay in hospital has ended. Remove patient
         self.patients_in_bed.remove(patient)
-        patient.time_leave_hospital = self._env.now
-        
-        # Relase bed resource
         self.beds.release(req)
-        
+        del patient
+
 
     def perform_audit(self):
         """SimPy process. Count numbers in hospital and waiting for a bed"""
