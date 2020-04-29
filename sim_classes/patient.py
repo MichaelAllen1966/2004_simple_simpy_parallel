@@ -10,8 +10,6 @@ class Patient():
         time patient arrives and joins queue for bed
     time_leave_queue:
         time patient leaves queue and enters hospital bed
-    time_leave_hospital:
-        time patient leaves hospital
 
     Methods
     -------
@@ -25,6 +23,5 @@ class Patient():
         self.priority = priority
         self.time_enter_queue = 0
         self.time_leave_queue = 0
-        self.time_leave_hospital = 0
 
         
