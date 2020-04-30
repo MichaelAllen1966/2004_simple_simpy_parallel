@@ -4,7 +4,9 @@ A simple SimPy hospital model running on parallel cpu cores. The intention is to
 
 ## Running the simulation:
 
-Use `single_model_run.ipynb` as your starting point to understand the model using a single run of a single sceanrio.
+Use `simplest_model_1.ipynb` to revise a simple SimPy model (non-object-oriented), and `simplest_model_2_with_resources.ipynb` to revise how limited resources may be added to a SimPy model.
+
+Use `single_model_run.ipynb` as your starting point to understand the object-oriented odel using a single run of a single sceanrio.
 
 Use `parallel_function.ipynb` to understand parallel processing across CPU cores.
 
@@ -48,9 +50,9 @@ This will fetch and install the libraries in a conda environment 'simple_sim'
 
 ### Learning objectives
 
-1. Learn how to set up a custom Python environment  (to ensure consistency of package versions) using Anaconda or Python/Pip environments
+1. Learn how to set up a custom Python environment  (to ensure consistency of package versions) using Anaconda or Python/Pip environments.
 
-2. Learn how to structure a simple SimPy simulation using Object Oriented Programming (OOP)
+2. Revise simple SimPy models, and learn how to structure a simple SimPy simulation using Object Oriented Programming (OOP)
 
 3. Learn how to create a Jupyter Notebook user interface to a model, allowing the user to create multiple sceanrios
 
