@@ -45,12 +45,17 @@ class Model():
     
     def end_run_routine(self):
         """Summarise patient counts and queue times"""
+
+        # Convert audit from list of dictionaries to DataFrame
+        self.hospital.audit = pd.DataFrame(self.hospital.audit)
         
         # Summarise daily audit
         self.results_audit = pd.DataFrame()
         self.results_audit['min'] = self.hospital.audit.min(axis=0)
         self.results_audit['median'] = self.hospital.audit.median(axis=0)
         self.results_audit['max'] = self.hospital.audit.max(axis=0)
+
+        
         
         # Set up DataFrame for queuing time stats
         self.results_qtime = pd.DataFrame(index=['P1', 'P2','P3'], 

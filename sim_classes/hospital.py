@@ -1,5 +1,4 @@
 import pandas as pd
-import queue
 from simpy import PriorityResource
 
 
@@ -31,6 +30,13 @@ class Hospital():
         Simpy process. Manages queues for beds, and allocates bed by patient 
         priority.
 
+    NOTE: This model allows for priority by using SimPy's PriorityResource. A useful
+    alternative is to use Python's `PriorityQueue`. This is a data structure that
+    sorts by priority and then at any time the highest priority item can be
+    removed. Use of queues allow you to easily check all resources are available before
+    requesting them. This is not so easy with SimPy's PriorityResource. However,
+    SimPy's PriorityResource is more efficient than Python's `PriorityQueue` as
+    it does not need to sort the queue each time a new item is added. 
     """
 
     def __init__(self, env, params, number_of_beds):
@@ -44,14 +50,13 @@ class Hospital():
         self.patients_in_bed = []
         self.queue_time_by_priority = {1: [], 2: [], 3: []}
 
-        # Set up DataFrame for daily audit
-        columns = ['in_bed','waiting_p1', 'waiting_p2', 'waiting_p3']
-        self.audit = pd.DataFrame(columns=columns)
+        # Set up list for audit results
+        self.audit = []
 
     
     def allocate_bed(self, patient):
         """SimPy process. Add patient to queue waiting for bed. Allocate beds by
-        patient priority. Trach queueing times"""
+        patient priority. Track queueing times"""
 
         # Put patient in list of wating patients.
         patient.time_enter_queue = self._env.now
@@ -102,17 +107,6 @@ class Hospital():
             results['waiting_p2'] = self.count_patient_waiting_by_priority[2]
             results['waiting_p3'] = self.count_patient_waiting_by_priority[3]
             # Add results to audit DataFrame
-            self.audit = self.audit.append(results,ignore_index=True)
+            self.audit.append(results)
             # 1 day delay before continuing with while loop
             yield self._env.timeout(1)
-        
-
-
-
-
-
-
-
-
-
-
