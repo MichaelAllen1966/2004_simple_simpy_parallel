@@ -2,15 +2,15 @@ name: simple_sim
 channels:
   - defaults
 dependencies:
-  - joblib
+  - joblib=1.1.1
   - jupyter
   - jupyterlab
   - matplotlib
   - notebook
-  - numpy
-  - pandas
+  - numpy=1.24
+  - pandas=1.5
   - pip
   - python=3.10
   - pip:
-    - simpy
+    - simpy==4.0.1
 
