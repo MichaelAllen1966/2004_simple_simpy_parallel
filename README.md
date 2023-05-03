@@ -10,7 +10,7 @@ Use `single_model_run.ipynb` as your starting point to understand the object-ori
 
 Use `parallel_function.ipynb` to understand parallel processing across CPU cores.
 
-Use `sim_replicates.ipynb` to see how multiple sceanrios may be defined and running with replication across multiple CU cores>
+Use `simple_replicate_scenarios_model.ipynb` to see how multiple scenarios may be defined and running with replication across multiple CU cores.
 
 Please also see `Additional models` folder for further model examples (e.g. including plotting results).
 
