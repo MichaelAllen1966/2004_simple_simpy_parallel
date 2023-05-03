@@ -6,7 +6,7 @@ A simple SimPy hospital model running on parallel cpu cores. The intention is to
 
 Use `1_simplest_model_1.ipynb` to revise a simple SimPy model (non-object-oriented), and `2_simplest_model_2_with_resources.ipynb` to revise how limited resources may be added to a SimPy model.
 
-Use `3_single_model_run.ipynb` as your starting point to understand the object-oriented odel using a single run of a single sceanrio.
+Use `3_single_model_run.ipynb` as your starting point to understand the object-oriented model using a single run of a single sceanrio.
 
 Use `4_parallel_function.ipynb` to understand parallel processing across CPU cores.
 
