@@ -40,16 +40,6 @@ This will fetch and install the libraries in a conda environment 'simple_sim'
 4. To activate the enviroment run the following command:
     `conda activate simple_sim`
     
-### Using Python environments
-
-1. Navigate to the main project folder (unless you prefer to build your Python environments elsewhere.
-
-2. Open a terminal/command line, and type `python3 -m venv venv`
-
-3. Activate your environment with `source .\venv\bin\activate`
-
-4. Install requirements with `pip install -r requirements.txt`
-
 ### Learning objectives
 
 1. Learn how to set up a custom Python environment  (to ensure consistency of package versions) using Anaconda or Python/Pip environments.
