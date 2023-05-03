@@ -1,7 +1,0 @@
-joblib
-jupyterlab
-matplotlib
-notebook
-numpy
-pandas
-simpy
