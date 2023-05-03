@@ -63,3 +63,31 @@ This will fetch and install the libraries in a conda environment 'simple_sim'
 5. Learn how to run SimPy models with multiple scenarios and replicates (across CPU cores) with a Jupyter Notebook interface
 
 6. Learn how to make you model available  on the web using GitHub and mybinder.org
+
+## Files
+
+### Simple model examples
+
+These are standalone models without parallel processing or scenario handing. These are to illustrate simpy models.
+
+* `simplest_model_1.ipynb`: A standalone model of patients arriving at ED and being seen in order. There are no resources in this model.
+
+* `simplest_model_2_with_resources.ipynb`: A standalone model of patients arriving at ED and being seen in order. This model adds the doctor as a resource.
+
+### Setting up the model for scenarios
+
+Scenarios allow us to pass model parameters to the model, and so may be used to automate running the model with different paramater values.
+
+#### `single_model_run.ipynb`
+
+* This model holds model parameters in a `Scenario` class that is available by loading the `parameters` module from the `sim_classes` package.
+
+* The simulation model is loaded as a class `Model` from the `model` module in the `sim_classes` package. The model itself loads a `Patient` class which is used to create patient objects which hold the priority of the patient, and track the patient through the hospital. The `Hospital` class manages patients through the hospital.
+
+#### parallel_function.ipynb
+
+* This is an example of using `joblib` to run replicates of a function across multiple CPU cores. It does not use SimPy.
+
+#### simple_replicate_scenarios_model.ipynb
+
+* This notebook uses `joblib` to set up and run multiple replicates of a model. It calls the `replication` module from the `sim_classes` package. This module runs the model in parallel multiple times for each scenario, and and collates results.
